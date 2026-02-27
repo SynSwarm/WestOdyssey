@@ -1,4 +1,4 @@
-# 🌀 Westodyssey (西行奥德赛)
+# 🌀 Westodyssey (OpenClaw之西游记) 
 **Every complex task is a Digital Odyssey.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
