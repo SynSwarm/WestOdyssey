@@ -1,104 +1,198 @@
-# 🌀 Westodyssey (OpenClaw之西游记) 
-**Every complex task is a Digital Odyssey.**
+# 🏮 Westodyssey: AI Collaboration Inspired by Journey to the West
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Powered by OpenClaw](https://img.shields.io/badge/Engine-OpenClaw-blue)](https://github.com/OpenClaw/OpenClaw)
-[![Website](https://img.shields.io/badge/Official-Westodyssey.com-gold)](https://westodyssey.com)
+<div align="center">
+  
+![AI Collaboration Framework](https://img.shields.io/badge/Framework-AI%20Collaboration-007ACC?style=for-the-badge&logo=openai)
+![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active%20Development-yellow?style=for-the-badge)
 
-> **“敢问路在何方？路在分布式执行与角色化纠偏之中。”**
+**Every complex task is a Digital Odyssey. Four AI disciples work together on a journey to complete your mission.**
 
-**Westodyssey** 是一个基于 [OpenClaw](https://github.com/OpenClaw/OpenClaw) 核心引擎二次开发的增强型多智能体（Multi-Agent）协作框架。我们通过引入极具东方哲学色彩的**“西游协作模型（The Pilgrimage Protocol）”**，彻底重构了 AI Agent 的工作流，解决了传统框架中**协同难、黑盒化、易失控**的致命痛点。
+🌐 Language: [English](#) | [中文](README.zh-CN.md)
 
----
+[🚀 Quick Start](#quick-start) · [📖 Documentation](#documentation) · [💬 Discussions](https://github.com/SynSwarm/WestOdyssey/discussions) · [🐛 Issues](https://github.com/SynSwarm/WestOdyssey/issues)
 
-## 🎯 为什么需要 Westodyssey？
+</div>
 
-目前的 Agent 框架往往过于抽象，单一 Agent 容易产生幻觉（Hallucination），而多 Agent 协作又容易陷入死循环。
+## 🎯 Project Vision
 
-Westodyssey 不卷底层模型参数，而是**卷人机协作的直觉**：
-1. **降维认知：** 任何非技术人员都能秒懂“八戒负责给悟空的代码挑刺”。
-2. **拒绝黑盒：** 将冷冰冰的 Terminal Log 转化为具有角色性格的“对抗辩论流”。
-3. **人类兜底：** 确立了用户（唐僧）的最高决策权，Agent 跑偏时一键念咒纠回。
+> "Transform complex AI task collaboration into an epic journey like Journey to the West: Wukong solves problems, Bajie audits quality, Wujing delivers results, and the White Horse remembers everything."
 
----
+**Westodyssey** is an innovative AI collaboration framework inspired by the classic Chinese novel **Journey to the West**. It organizes four specialized AI agents into an efficient team that handles complex tasks through coordinated roles.
 
-## 🎭 核心架构：取经团队 (The Squad)
+## 📖 Journey to the West Background (For International Audience)
 
-在 Westodyssey 中，每一个智能体都被赋予了极其克制且明确的系统边界：
+### The Classic Story
+**Journey to the West** (西游记) is one of the Four Great Classical Novels of Chinese literature, written in the 16th century during the Ming dynasty. It recounts the legendary pilgrimage of the Buddhist monk **Tang Sanzang** (唐僧) who travels from China to India to obtain sacred Buddhist texts.
 
-### 🐒 Wukong (The Lead Solver / 首席攻坚手)
-* **能力：** 最高权限的工具调用者（浏览器控制、代码沙盒、API 搜索）。
-* **职责：** 负责拆解最复杂的任务并暴力输出解决方案。他是能力的上限，但也最容易“上头”。
+### The Iconic Team
+The story features a diverse team with complementary skills that inspired our AI framework:
 
-### 🐷 Pigsy (The Critic / 首席风控与审计官)
-* **能力：** 交叉验证、鲁棒性测试、Red Teaming（红蓝对抗）。
-* **底层逻辑：**
-  * *“懒惰”即优化：* 嫌悟空的代码太复杂，强制要求寻找更低 Token 消耗的降级方案。
-  * *“胆小”即安全：* 拦截可能导致死循环或被封 IP 的高风险操作。
-  * *“碎碎念”即反思：* 悟空的代码如果不经过八戒的 `Review_Pass`，绝不允许进入下一环节。
+| Character | Chinese Name | Role | Modern AI Interpretation |
+|-----------|--------------|------|--------------------------|
+| **Sun Wukong** | 孙悟空 | The Monkey King | Core problem solver, code expert |
+| **Zhu Bajie** | 猪八戒 | The Pig Monk | Quality auditor, risk manager |
+| **Sha Wujing** | 沙悟净 | The Sand Monk | Data formatter, deliverer |
+| **White Dragon Horse** | 白龙马 | The Steed | Knowledge base, memory system |
+| **Tang Sanzang** | 唐僧 | The Master | Human user, mission guide |
 
-### 🐢 Friar (The Executor / 首席执行官)
-* **能力：** 0 Temperature，极致稳定。
-* **职责：** 承接经过确认的方案，进行数据清洗、Markdown 格式化、本地文件 I/O 等“脏活累活”。
+### Why This Story Inspires Modern AI
+1. **Team Diversity**: Each character has unique strengths that complement others
+2. **Role Specialization**: Clear division of labor based on expertise
+3. **Mentor Guidance**: Human oversight directing the AI team
+4. **Journey Metaphor**: Complex tasks as epic journeys with growth
 
-### 👳‍♂️ The Monk (The Orchestrator / 用户与决策者)
-* **能力：** `Human-in-the-loop` 协议。
-* **职责：** 把握最终方向。不需要懂代码，只需要在关键节点按下“同意”或下达“紧箍咒（纠偏指令）”。
+We've reimagined this 500-year-old story for the age of AI, creating a framework where digital "disciples" collaborate like the classic literary team.
 
-### 🐎 The Steed (The Memory Layer / 记忆与基础设施)
-* **能力：** RAG (Retrieval-Augmented Generation)、向量数据库。
-* **职责：** 默默承载所有的对话上下文与私有知识库，确保团队走得再远也不忘初衷。
+## 👥 The Westodyssey Team
 
----
+| Disciple | Role | Responsibilities | Key Traits |
+|----------|------|------------------|------------|
+| 🐒 **Wukong** | Core Problem Solver | Task decomposition, code writing, data collection | Most capable, execution expert |
+| 🐷 **Bajie** | Chief Audit Officer | Code review, security audit, quality assurance | Extremely挑剔, quality guardian |
+| 🐢 **Wujing** | Data Delivery Officer | Data cleaning, formatting, final delivery | Strict规范, zero-error output |
+| 🐎 **White Horse** | Memory Foundation | Historical recording, knowledge retrieval, experience传承 | Records但不推理, knowledge库 |
 
-## 🛠 核心机制：紧箍咒协议 (The Tight-Fillet Protocol)
+## ✨ Core Features
 
-Westodyssey 不相信完全的“Auto”。我们设计了优雅的降级与求助机制：
-1. **自动驾驶：** 悟空执行 ➡️ 八戒审计 ➡️ 沙僧落地。
-2. **风险挂起：** 当八戒连续 3 次打回悟空的方案，或系统检测到 Token 消耗异常。
-3. **呼叫唐僧：** 系统强制暂停，弹出控制台请求用户介入。用户只需输入一句自然语言（如：“八戒说得对，悟空你换个思路，用官方 API 试试”），即可重置 Agent 状态。
+### 🎭 Four-Role AI Collaboration
+- **Wukong**: Handles the most complex coding and data analysis tasks
+- **Bajie**: Ensures all outputs pass strict security and quality reviews  
+- **Wujing**: Formats results into professional, standardized outputs
+- **White Horse**: Records all history and provides knowledge support
 
----
+### 🔒 Three-Level Security Review
+1. **Wukong Self-Check**: Code logic and functionality verification
+2. **Bajie Audit**: Security, efficiency, and best practices review
+3. **Wujing Validation**: Output format and specification verification
 
-## 🚀 快速开始 (Quick Start)
+### 📚 Continuous Knowledge Accumulation
+- All task history automatically recorded to knowledge base
+- Intelligent retrieval based on RAG (Retrieval-Augmented Generation)
+- Team experience continuously accumulates and optimizes
 
-### 1. 安装
-```bash
-git clone [https://github.com/YourName/Westodyssey.git](https://github.com/YourName/Westodyssey.git)
-cd Westodyssey
-pip install -r requirements.txt
+### 🔄 Standardized Workflow
+```
+User Task → White Horse (Load Context) → Wukong (Execute) → Bajie (Audit) → Wujing (Format) → User
+↑                                                                           ↓
+└─────────────────────── White Horse (Record Memory) ───────────────────────┘
 ```
 
-### 2. 组建团队并开启奥德赛
-用极其优雅的代码定义你的取经之旅：
-```bash
-from westodyssey import Pilgrimage
-from westodyssey.agents import Wukong, Pigsy, Friar, Monk
+## 🚀 Quick Start
 
-# 1. 配置角色 (可混搭不同厂商的大模型)
-team = Pilgrimage(
-    solver=Wukong(model="gpt-4o", tools=["browser", "code_interpreter"]),
-    critic=Pigsy(model="claude-3-5-sonnet", strictness="high"),
-    executor=Friar(model="deepseek-chat"),
-    orchestrator=Monk(human_in_the_loop=True) # 开启唐僧兜底模式
+### Requirements
+- Python 3.8+
+- OpenAI API key (or other compatible LLM API)
+
+### Basic Installation
+```bash
+# Clone repository
+git clone https://github.com/SynSwarm/WestOdyssey.git
+cd WestOdyssey
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure API key
+echo "OPENAI_API_KEY=your_api_key_here" > .env
+```
+
+### Your First Mission
+```python
+from westodyssey import TangSeng
+
+# Create TangSeng instance (user proxy)
+ts = TangSeng()
+
+# Assign a mission
+result = ts.assign_mission(
+    mission="Analyze current GitHub trending projects and create a Markdown report",
+    context="Should include project description, tech stack, stars trend, etc."
 )
 
-# 2. 发布宏愿 (下达任务)
-task = "帮我抓取 GitHub 上排名前 5 的 AI Agent 框架，对比它们的底层逻辑，并生成一份带图表的 Markdown 分析报告。"
-
-# 3. 踏上旅程
-team.dispatch(task)
+print(result)
 ```
 
-## 📅 路线图 (Roadmap)
- * [x] Phase 1: 确立 Westodyssey 核心概念与专属域名 Westodyssey.com
- * [ ] Phase 2: 发布开源的 Agent System Prompts 性格配置文件库。
- * [ ] Phase 3: 推出 Westodyssey Dashboard，让多智能体协作过程可视化（取经路线图 UI）。
- * [ ] Phase 4: 上线商业化 SaaS 平台，支持企业级私有化“取经团队”部署。
+## 📁 Project Structure
 
-## 🤝 参与共建 (Join the Journey)
-无论你是能写核心底层逻辑的“悟空”，还是擅长发现 Bug 的“八戒”，亦或是热爱写文档的“沙僧”，Westodyssey 社区都欢迎你的加入！
- * 🌍 官网: Westodyssey.com (建设中)
- * 🐛 Issues: 欢迎提交你遇到的任何“妖怪”。
-“每一场复杂的计算，都是一段波澜壮阔的数字奥德赛。” 立即 ⭐ Star 本项目，和我们一起西行！
+```
+WestOdyssey/
+├── westodyssey/          # Core implementation
+│   ├── __init__.py
+│   ├── tangseng.py       # TangSeng (user proxy)
+│   ├── wukong.py         # Wukong implementation
+│   ├── pigsy.py          # Bajie implementation  
+│   ├── friar.py          # Wujing implementation
+│   └── steed.py          # White Horse implementation
+├── config/               # Configuration files
+│   ├── team_config.json  # Team configuration
+│   └── workflow.yaml     # Workflow configuration
+├── examples/             # Usage examples
+├── docs/                 # Documentation (English)
+├── docs/zh-CN/          # Chinese documentation
+└── tests/                # Test code
+```
 
+## 📖 Documentation
+
+### English Documentation
+- [Quick Start Guide](docs/getting-started.md)
+- [Configuration Guide](docs/configuration.md)
+- [API Reference](docs/api-reference.md)
+- [Advanced Topics](docs/advanced.md)
+
+### 中文文档 (Chinese Documentation)
+- [快速开始指南](docs/zh-CN/getting-started.md)
+- [配置详解](docs/zh-CN/configuration.md)
+- [API参考](docs/zh-CN/api-reference.md)
+
+### Examples & Case Studies
+- [Data Analysis Example](examples/data-analysis/)
+- [Code Review Example](examples/code-review/)
+- [Document Generation Example](examples/document-generation/)
+
+## 👥 Community & Support
+
+### How to Participate
+1. **Report Issues**: [GitHub Issues](https://github.com/SynSwarm/WestOdyssey/issues)
+2. **Join Discussions**: [GitHub Discussions](https://github.com/SynSwarm/WestOdyssey/discussions)
+3. **Contribute Code**: See [Contribution Guide](CONTRIBUTING.md)
+
+### Community Guidelines
+- Please read our [Code of Conduct](CODE_OF_CONDUCT.md)
+- Maintain friendly and professional communication
+- Encourage constructive feedback and suggestions
+
+### Language Support
+- **Primary Language**: English (for international community)
+- **Secondary Language**: Chinese (中文支持)
+- **Discussion Language**: English preferred, Chinese supported
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+Thanks to all contributors and users for their support! Special thanks to:
+- **OpenClaw Community** - For foundational framework support
+- **Early Test Users** - For valuable feedback
+- **Open Source Contributors** - For making the project better
+
+## 📞 Contact
+
+- **Project Homepage**: [https://github.com/SynSwarm/WestOdyssey](https://github.com/SynSwarm/WestOdyssey)
+- **Discussion Forum**: [GitHub Discussions](https://github.com/SynSwarm/WestOdyssey/discussions)
+- **Issue Tracker**: [GitHub Issues](https://github.com/SynSwarm/WestOdyssey/issues)
+
+---
+
+<div align="center">
+
+**Journey to the West, Accompanied by AI**  
+*Transform every complex task into an epic Digital Odyssey*
+
+[⬆️ Back to Top](#-westodyssey-ai-collaboration-inspired-by-journey-to-the-west)
+
+</div>
